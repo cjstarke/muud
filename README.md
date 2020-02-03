@@ -16,4 +16,3 @@ Post MVP:
 
 API: http://api.openweathermap.org/data/2.5/weather?
 
-/Users/CJstarke/Mandalorians/Unit_1/project_1/muud/png wireframes/Project 1 Wireframes.pdf
