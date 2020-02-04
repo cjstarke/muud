@@ -19,12 +19,15 @@ The app must get the user's geolocation from the browser, then use that informat
  (http://api.openweathermap.org/data/2.5/weather?)
 
 ## Wireframes
+## phone pages
 ![first phone page](https://i.imgur.com/WtqDnAu.png)
 ![second phone page](https://i.imgur.com/9cQK0Qr.png)
 ![third phone page](https://i.imgur.com/Cs7VQtb.png)
+## ipad pages
 ![first ipad page](https://i.imgur.com/9UO8tdx.png)
 ![second ipad page](https://i.imgur.com/DUymDFT.png)
 ![third ipad page](https://i.imgur.com/9NNUr1S.png)
+## webpages
 ![frist webpage](https://i.imgur.com/8N6Yy6i.png)
 ![second webpage](https://i.imgur.com/9Kn0vR5.png)
 ![third webpage](https://i.imgur.com/YhPkBqc.png)
