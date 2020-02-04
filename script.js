@@ -30,7 +30,7 @@ function showPosition(position) {
         let descript = res.data.weather[0].id
         
         describeWeather(descript)
-        tempCalc(temp)
+        //tempCalc(temp)
         
     
         mainCalc(temp)
@@ -38,7 +38,7 @@ function showPosition(position) {
         
       
         
-        //ans.innerHTML =`You are in ${res.data.name} and it is ${res.data.main.temp} degrees with ${res.data.weather[0].description}`;
+        
     }).catch(err => {
       console.log(err)
     })
@@ -46,24 +46,25 @@ function showPosition(position) {
   categories()
 }
 // this function takes the temparature and assigns it a rating
-const tempCalc = function (num) {
-  let temp = 0
-  let myTemp = parseInt(num)
-  if (num < 30) {
-    temp = 1
-  } else if (num < 40) {
-    temp = 4
-  } else if (num < 50) {
-    temp = 8
-  } else if (num < 60) {
-    temp = 11
-  } else {
-    temp = 15   
-  }
-  let tempArr = [temp, myTemp]
-
-  return tempArr
-}
+// const tempCalc = function (hello) {
+//   let temp = 0
+  
+//   if (hello < 30) {
+//     temp = 1
+//   } else if (hello < 40) {
+//     temp = 4
+//   } else if (hello < 50) {
+//     temp = 8
+//   } else if (hello < 60) {
+//     temp = 11
+//   } else {
+//     temp = 15   
+//   }
+  
+// console.log(temp)
+//   return temp
+  
+// }
 
 //function takes the weather description and assigns it a rating
 const describeWeather = function(description) {
@@ -148,36 +149,41 @@ const dayHour = function () {
   }
 }
 //this function calculates a weighted random number to be assigned to a mood, then puts variables in local storage
-const mainCalc = function () {
+const mainCalc = function (hello) {
   let dayOfWeek = weekday()
   let hour = dayHour()
   let weatherStyleInt = describeWeather()[0]
   let weatherStyle = describeWeather()[1]
-  let tempInt = tempCalc()[0]
-  let tempReal = tempCalc()[1]
-  let bigNum = parseInt(Math.random() * 20 + hour + weatherStyleInt + tempInt + dayOfWeek)
+  let temp = 0
+  let myTemp = parseInt(hello)
+  
+  if (hello < 30) {
+    temp = 1
+  } else if (hello < 40) {
+    temp = 4
+  } else if (hello < 50) {
+    temp = 8
+  } else if (hello < 60) {
+    temp = 11
+  } else {
+    temp = 15   
+  }
+  
+  console.log(temp)
+  console.log(myTemp)
+
+  // let tempReal = tempCalc()
+  let bigNum = parseInt(Math.random() * 20 + hour + weatherStyleInt + temp + dayOfWeek)
   localStorage.setItem("bigNumber", bigNum)
-  localStorage.setItem("temparature", tempReal)
+  localStorage.setItem("temparature", myTemp)
   localStorage.setItem("atmosphere", weatherStyle)
+  
 }
 
 
 
 
-// let mood = 'fun'
-  // if (bigNum < 20) {
-  //   mood = 'sleepy'
-  // } else if (bigNum < 30) {
-  //   mood = 'gloomy'
-  // } else if (bigNum < 40) {
-  //   mood = 'bored'
-  // } else if (bigNum < 50) {
-  //   mood = 'chill'
-  // } else if (bigNum < 60) {
-  //   mood = 'excited'
-  // } else {
-  //   mood = 'pumped'
-  // } 
+
 
 
 
