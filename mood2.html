@@ -6,17 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>mood2</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700,800&display=swap" rel="stylesheet"> 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="scriptmood.js"></script>
 </head>
 <body> 
-  <h2>MÜD</h2> 
-  <p class="sentence"> It is <span class="day"> </span><span class="time"></span> and it is <span class="temp"></span> degrees and <span class="weather"></span>. You are</p>
-  <p class= "yourMood">GLOOMY</p>
-  <div class="gifdiv"></div>
-  <div class= "again">
-    <a href="index.html">Try again</a>
+  <div class="mooddiv">
+    <p class=" sentence"> It is <span class="day"> </span><span class="time"></span> and it is <span class="temp"></span> degrees and <span class="weather"></span>. You are</p>
+  </div>
+  <div class="mooddiv">
+    <p class= "yourMood">GLOOMY</p>
+  </div>
+  <div class="mooddiv gifdiv"></div>
+  <div class= "mooddiv again">
+    <a href="index.html">
+      <button class = "button">Play Again</button>
+    </a>
   </div>
 </body>
 </html>

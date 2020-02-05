@@ -32,9 +32,9 @@ const timeOfDay = function () {
     describeTime = ', early in the morning'
   } else if (time < 12) {
     describeTime = ' morning'
-  } else if (time < 5) {
+  } else if (time < 17) {
     describeTime = ' afternoon'
-  } else if (time < 8) {
+  } else if (time < 20) {
     describeTime = ' evening'
   } else {
     describeTime = ' night'
@@ -58,7 +58,7 @@ let gifDisplay = async function () {
   await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=Wq7BuCPCVvqE56WBBzlB8cQqIpRPJlMN&tag=${mood}&rating=PG&lang=en`)
     .then(res => { 
       let gif = res.data.data.images.downsized_large.url
-      gifDiv.innerHTML = `<img src= "${gif}"/>`
+      gifDiv.innerHTML = `<img class= "gifimage" src= "${gif}"/>`
       console.log(mood)
       
   }).catch(err => {

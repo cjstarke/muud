@@ -16,27 +16,64 @@ body {
   
 
 }
-
-div {
+.animate {
+  background-color: white;
+  animation-name: example;
+  animation-duration: 4s;
 }
+@keyframes example {
+  0%   {background-color:#08f7fe;}
+  10%  {background-color: #fe53bb;}
+  20%  {background-color: #09fbd3;}
+  30% {background-color: #f5d300;}
+  40%   {background-color:#08f7fe;}
+  50%  {background-color: #fe53bb;}
+  60%  {background-color: #09fbd3;}
+  70% {background-color: #f5d300;}
+  80%   {background-color:#08f7fe;}
+  90%  {background-color: #fe53bb;}
+  100%  {background-color: #09fbd3;}
+}
+
 
 footer {
   height: 20%;
 }
 a {
-  height: 100%;
-  width: 100%;
-}
-
-
-.indexdiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indexdiv {
+  
   height: 12%;
   
   font-size: 200%;
+}
+.ringdiv {
+  height: 20%;
+}
+.mooddiv {
+  
+  height: 12%
+}
+.gifdiv {
+  height: 35%;
+}
+.gifimage {
+ height: 100%;
+
 }
 .button {
   font-family: 'Dosis', sans-serif;
@@ -52,27 +89,64 @@ a {
   font-size: 100%;
 
 }
-
+.ringpic {
+  height: 100%;
+}
+.sentence {
+  font-size: 200%;
+}
+.yourMood {
+  font-size: 300%;
+  font-weight: 800;
+  color: #FF6B6C;
+}
 #title  {
   font-weight: 800;
   color:#FF6B6C;
   font-size: 400%;
 }
 
-.ringpic {
-  height: 95%;
+
+#getmood {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+}
+#bigring {
+  height: 100%;
 }
 
 #ring {
   height: 25%;
 
 }
-
-@media only screen and (min-width: 600px) {
-
+#mainringdiv {
+  height: 45%;
+}
+#nextlink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#start2 {
+  font-size: 250%;
+  height: 50%;
 }
 
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 600px) {
+  .sentence {
+    font-size: 125%;
+    padding: 0 8%;
+  }
+  
+}
+@media only screen and (min-width: 1000px) {
+  .sentence {
+    font-size: 200%
+  }
 
 }
 
