@@ -4,25 +4,27 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700,800&display=swap" rel="stylesheet"> 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>  
-  <div>
-      <h1>MÜD</h1>
+  <div class = "indexdiv" id="title">
+      <p>MÜD</p>
   </div>
-  <div>
-    <p class="topwords">We predict your mood and act accordingly</p>
+  <div class="indexdiv">
+    <p class="sentence">We predict your mood and act accordingly</p>
   </div>
-  <div class="ring">
+  <div class="indexdiv" id="ring">
+    <img class = "ringpic" src="ring.png" alt="ring">
   </div>
-  <div id="weather">
-    <p>Click the button to get your weather.</p>
-    <button id="location">Location</button>
+  <div id="weather" class=  "indexdiv">
+    <button id="location" class="button">Location</button>
   </div>
-  <div id='getstarted'>
-    <p id="return"></p>
-  </div>
+
+  <footer id='getstarted' class="indexdiv"> 
+    <p id="return"></p> 
+  </footer>
  
 </body>
 </html>

@@ -1,1 +1,79 @@
 
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  background-color: white;
+  color: #5B5F97;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  font-weight: 600;
+  
+
+}
+
+div {
+}
+
+footer {
+  height: 20%;
+}
+a {
+  height: 100%;
+  width: 100%;
+}
+
+
+.indexdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12%;
+  
+  font-size: 200%;
+}
+.button {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 70%;
+  border: 5px cadetblue;
+  background-color: #5B5F97;
+  text-decoration: none;
+  font-weight: 800;
+  height: 70%;
+  width: 50%;
+  font-size: 100%;
+
+}
+
+#title  {
+  font-weight: 800;
+  color:#FF6B6C;
+  font-size: 400%;
+}
+
+.ringpic {
+  height: 95%;
+}
+
+#ring {
+  height: 25%;
+
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+

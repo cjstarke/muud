@@ -34,7 +34,9 @@ function showPosition(position) {
         
     
         mainCalc(temp)
-        newLink.innerHTML = `<a href="ring.html">Get Started</a>`
+        newLink.innerHTML = `<a  href="ring.html">
+        <button class = "button" id = "start">Get Started</button>
+        </a>`
         
       
         
