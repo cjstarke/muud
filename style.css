@@ -54,6 +54,12 @@ div {
   justify-content: center;
   align-items: center;
 }
+span {
+  color: #FF6B6C
+}
+p {
+  font-size: 300%;
+}
 
 .indexdiv {
   
@@ -85,20 +91,36 @@ div {
   text-decoration: none;
   font-weight: 800;
   height: 70%;
-  width: 50%;
-  font-size: 100%;
+  /* width: 50%; */
+  /* font-size: 100%; */
+  font-size: 225%;
+  width: 95%;
 
+}
+.again {
+  font-size: 125%
 }
 .ringpic {
   height: 100%;
 }
 .sentence {
-  font-size: 200%;
+  /* font-size: 200%; */
+  font-size: 175%;
+  padding: 0 8%;
+  
 }
 .yourMood {
   font-size: 300%;
   font-weight: 800;
   color: #FF6B6C;
+}
+.indexp {
+  font-size: 200%;
+}
+
+.again {
+  font-size: 150%;
+  width: inherit;
 }
 #title  {
   font-weight: 800;
@@ -112,6 +134,7 @@ div {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   outline: none;
+  
 }
 #bigring {
   height: 100%;
@@ -135,19 +158,68 @@ div {
   height: 50%;
 }
 
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 981px) {
   .sentence {
-    font-size: 125%;
-    padding: 0 8%;
+
   }
+  .ringdiv {
+    font-size: 200%;
+    margin: 0 5%;
+  }
+  .button {
+    width: 70%;
+
+  }
+  #getMood {
+
+  }
+  .again {
+
+  }
+  p {
+
+  }
+  .indexp {
+
+  }
+  #bigring {
+    height: 90%;
+  }
+  .mooddiv {
+    font-size: 225%
+  }
+}
+
+@media only screen and (min-width: 1162px){
+  .indexdiv {
+    height: 15%;
+  }
+   #title {
+     font-size: 250%;
   
-}
-@media only screen and (min-width: 1000px) {
-  .sentence {
-    font-size: 200%
+   }
+   #location {
+     height: 70%;
+     font-size: 175%;
+   }
+   #start {
+     height: 70%;
+     font-size: 175%
+   }
+   #ring {
+     height: 30%
+   }
+   .sent {
+     font-size: 170%
+   }
+   #start2 {
+     height: 65%;
+     font-size: 200%
+   }
+   .mooddiv {
+    font-size: 175%
+  }
   }
 
-}
 
 

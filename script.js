@@ -10,22 +10,27 @@ let lat = 0
 let lon = 0
 //this function asks user for location priveleges on click of button
 
-button.addEventListener("click",  getLocation = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    ans.innerHTML = "Geolocation is not supported by this browser.";
-  }
+button.addEventListener("click", async function () {
+  
+  let otherurl = `http://ip-api.com/json/`
+
+  let response = await axios.get(otherurl)
+  let result = response.data
+  showPosition(result)
+  
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(showPosition);
+  // } else { 
+  //   ans.innerHTML = "Geolocation is not supported by this browser.";
+  // }
 })
 //this function gets the coordinates and runs them through the weather api. then gives variables to other functions
 function showPosition(position) {  
-  lat = position.coords.latitude
-  lon = position.coords.longitude
+  lat = position.lat
+  lon = position.lon
   let categories = async function () {
     await axios.get(BASE_URL + `lat=${lat}&lon=${lon}` +'&units=imperial' + '&APPID=' + API_KEY)
       .then(res => { 
-        // console.log(lat)
-        // console.log(lon)
         let temp = res.data.main.temp
         let descript = res.data.weather[0].id
         
@@ -44,6 +49,7 @@ function showPosition(position) {
     }).catch(err => {
       console.log(err)
     })
+  
   }
   categories()
 }
@@ -171,15 +177,14 @@ const mainCalc = function (hello) {
     temp = 15   
   }
   
-  console.log(temp)
-  console.log(myTemp)
+  
 
   // let tempReal = tempCalc()
   let bigNum = parseInt(Math.random() * 20 + hour + weatherStyleInt + temp + dayOfWeek)
   localStorage.setItem("bigNumber", bigNum)
   localStorage.setItem("temparature", myTemp)
   localStorage.setItem("atmosphere", weatherStyle)
-  
+  console.log(bigNum)
 }
 
 
