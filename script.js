@@ -180,7 +180,7 @@ const mainCalc = function (hello) {
   
 
   // let tempReal = tempCalc()
-  let bigNum = parseInt(Math.random() * 20 + hour + weatherStyleInt + temp + dayOfWeek)
+  let bigNum = parseInt(Math.random() * 25 + hour + weatherStyleInt + temp + dayOfWeek)
   localStorage.setItem("bigNumber", bigNum)
   localStorage.setItem("temparature", myTemp)
   localStorage.setItem("atmosphere", weatherStyle)

@@ -65,7 +65,7 @@ p {
   
   height: 12%;
   
-  font-size: 200%;
+  font-size: 3vw;
 }
 .ringdiv {
   height: 20%;
@@ -125,7 +125,7 @@ p {
 #title  {
   font-weight: 800;
   color:#FF6B6C;
-  font-size: 400%;
+  font-size: 4vw;
 }
 
 
@@ -179,8 +179,8 @@ p {
   p {
 
   }
-  .indexp {
-
+  .indexdiv {
+    font-size: 2vw
   }
   #bigring {
     height: 90%;
@@ -190,13 +190,14 @@ p {
   }
 }
 
-@media only screen and (min-width: 1162px){
+@media only screen and (min-width: 1100px){
   .indexdiv {
     height: 15%;
+
   }
-   #title {
-     font-size: 250%;
-  
+    #title {
+      margin-top: 2%;
+      font-size: 3vw;
    }
    #location {
      height: 70%;
