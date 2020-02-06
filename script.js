@@ -8,7 +8,7 @@ const newLink = document.querySelector('#getstarted')
 
 let lat = 0
 let lon = 0
-//this function asks user for location priveleges on click of button
+//this function calls an api to get the user's location
 
 button.addEventListener("click", async function () {
   
@@ -18,16 +18,12 @@ button.addEventListener("click", async function () {
   let result = response.data
   showPosition(result)
   
-  // if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(showPosition);
-  // } else { 
-  //   ans.innerHTML = "Geolocation is not supported by this browser.";
-  // }
+  
 })
 //this function gets the coordinates and runs them through the weather api. then gives variables to other functions
 function showPosition(position) {  
-  lat = position.lat
-  lon = position.lon
+   lat = position.lat
+   lon = position.lon
   let categories = async function () {
     await axios.get(BASE_URL + `lat=${lat}&lon=${lon}` +'&units=imperial' + '&APPID=' + API_KEY)
       .then(res => { 
@@ -35,44 +31,17 @@ function showPosition(position) {
         let descript = res.data.weather[0].id
         
         describeWeather(descript)
-        //tempCalc(temp)
-        
-    
         mainCalc(temp)
         newLink.innerHTML = `<a  href="ring.html">
         <button class = "button" id = "start">Get Started</button>
-        </a>`
-        
-      
-        
-        
+        </a>`   
     }).catch(err => {
       console.log(err)
     })
-  
   }
   categories()
 }
-// this function takes the temparature and assigns it a rating
-// const tempCalc = function (hello) {
-//   let temp = 0
-  
-//   if (hello < 30) {
-//     temp = 1
-//   } else if (hello < 40) {
-//     temp = 4
-//   } else if (hello < 50) {
-//     temp = 8
-//   } else if (hello < 60) {
-//     temp = 11
-//   } else {
-//     temp = 15   
-//   }
-  
-// console.log(temp)
-//   return temp
-  
-// }
+
 
 //function takes the weather description and assigns it a rating
 const describeWeather = function(description) {
@@ -177,9 +146,6 @@ const mainCalc = function (hello) {
     temp = 15   
   }
   
-  
-
-  // let tempReal = tempCalc()
   let bigNum = parseInt(Math.random() * 25 + hour + weatherStyleInt + temp + dayOfWeek)
   localStorage.setItem("bigNumber", bigNum)
   localStorage.setItem("temparature", myTemp)
