@@ -31,3 +31,19 @@ The app must get the user's geolocation from the browser, then use that informat
 ![frist webpage](https://i.imgur.com/8N6Yy6i.png)
 ![second webpage](https://i.imgur.com/9Kn0vR5.png)
 ![third webpage](https://i.imgur.com/YhPkBqc.png)
+
+##  Final Product
+
+I completed the MVP, which was calling a weather api and putting your current weather info, along with the day of the week and time, into a weighted algorithm to produce a random Mood, giving each mood their own page.
+I used the weathermap api to find the weather, and an ap api to find the curent location, becuase I couldn't ask for the geolocation once I deployed it to surge, which is not "secure".
+
+I was also able to add a third api, the giphy api, to return a random gif based off of the returned mood. I was able to create css animation on the page that "finds their mood".
+
+## Final address and apis
+[Web address](muud.surge.sh)
+
+[location api](http://ip-api.com/json/)
+
+[Weather api](http://api.openweathermap.org/data/2.5/weather?)
+
+[GIF api](https://api.giphy.com/v1/gifs/)
