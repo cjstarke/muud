@@ -26,12 +26,13 @@ function showPosition(position) {
    lon = position.lon
   let categories = async function () {
     await axios.get(BASE_URL + `lat=${lat}&lon=${lon}` +'&units=imperial' + '&APPID=' + API_KEY)
-      .then(res => { 
+      .then(res => {
         let temp = res.data.main.temp
         let descript = res.data.weather[0].id
+        let weathArr = [temp, describeWeather(descript)[0], describeWeather(descript)[1]]
         
-        describeWeather(descript)
-        mainCalc(temp)
+    
+        mainCalc(weathArr)
         newLink.innerHTML = `<a  href="ring.html">
         <button class = "button" id = "start">Get Started</button>
         </a>`   
@@ -51,29 +52,46 @@ const describeWeather = function(description) {
   if (description < 300) {
     descripVar = 0
     weathertype = 'stormy'
+    let descriptArr = [descripVar, weathertype]
+    return descriptArr
   } else if (description < 500) {
     descripVar = 4
     weathertype = 'lightly raining'
+    let descriptArr = [descripVar, weathertype]
+    return descriptArr
   } else if (description < 600) {
     descripVar = 2
     weathertype = 'rainy'
+    let descriptArr = [descripVar, weathertype]
+    console.log(descriptArr)
+    return descriptArr
   } else if (description < 700) {
     descripVar = 2
     weathertype = 'snowing'
+    let descriptArr = [descripVar, weathertype]
+    return descriptArr
   } else if (description < 800) {
     descripVar = 7
     weathertype = 'hazy'
+    let descriptArr = [descripVar, weathertype]
+    console.log(descriptArr)
+    return descriptArr
   } else if (description === 800) {
     descripVar = 10
     weathertype = 'clear'
+    let descriptArr = [descripVar, weathertype]
+    console.log(descriptArr)
+    return descriptArr
+    
   
   } else {
     descripVar = 7
     weathertype = 'cloudy' 
+    let descriptArr = [descripVar, weathertype]
+    return descriptArr
   }
   
-  let descriptArr = [descripVar, weathertype]
-  return descriptArr
+    
 }
 //this function takes the day of the week and assigns it a rating
 const weekday = function () {
@@ -127,25 +145,26 @@ const dayHour = function () {
 }
 //this function calculates a weighted random number to be assigned to a mood, then puts variables in local storage
 const mainCalc = function (hello) {
+  
   let dayOfWeek = weekday()
   let hour = dayHour()
-  let weatherStyleInt = describeWeather()[0]
-  let weatherStyle = describeWeather()[1]
-  let temp = 0
+  let weatherStyleInt = hello[1]
+  let weatherStyle = hello[2]
+  let temp = hello[0]
   let myTemp = parseInt(hello)
-  
-  if (hello < 30) {
+  console.log(hello)
+  if (hello[0] < 30) {
     temp = 1
-  } else if (hello < 40) {
+  } else if (hello[0] < 40) {
     temp = 4
-  } else if (hello < 50) {
+  } else if (hello[0] < 50) {
     temp = 8
-  } else if (hello < 60) {
+  } else if (hello[0] < 60) {
     temp = 11
   } else {
     temp = 15   
   }
-  
+  console.log(weatherStyle)
   let bigNum = parseInt(Math.random() * 25 + hour + weatherStyleInt + temp + dayOfWeek)
   localStorage.setItem("bigNumber", bigNum)
   localStorage.setItem("temparature", myTemp)
