@@ -40,7 +40,7 @@ I used the weathermap api to find the weather, and an ap api to find the curent 
 I was also able to add a third api, the giphy api, to return a random gif based off of the returned mood. I was able to create css animation on the page that "finds their mood".
 
 ## Final address and apis
-[Web address](muud.surge.sh)
+[Web address](http://muud.surge.sh)
 
 [location api](http://ip-api.com/json/)
 
