@@ -24,7 +24,7 @@ The app must get the user's geolocation from the browser, then use that informat
 [GIF api](https://api.giphy.com/v1/gifs/)
 
 ## Wireframes
-(<img src="https://i.imgur.com/WtqDnAu.png" width="100" /> <img src="https://i.imgur.com/9cQK0Qr.png" width="100"/> <img src="https://i.imgur.com/Cs7VQtb.png" width="100"/>)
+<img src="https://i.imgur.com/WtqDnAu.png" width="250" /> <img src="https://i.imgur.com/9cQK0Qr.png" width="250"/> <img src="https://i.imgur.com/Cs7VQtb.png" width="250"/>
 
 <!-- ## ipad pages
 ![first ipad page](https://i.imgur.com/9UO8tdx.png)
