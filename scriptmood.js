@@ -1,6 +1,6 @@
 //const bigNum = localStorage.getItem("bigNumber")
-const tempReal =  localStorage.getItem("temparature")
-const weatherStyle =  localStorage.getItem("atmosphere")
+const tempReal = localStorage.getItem("temparature")
+const weatherStyle = localStorage.getItem("atmosphere")
 const sentence = document.querySelector(`#sentence`)
 const weatherSpan = document.querySelector('.weather')
 const timeSpan = document.querySelector('.time')
@@ -39,31 +39,28 @@ const timeOfDay = function () {
   } else {
     describeTime = ' night'
   }
-return describeTime 
-  
+  return describeTime
+
 }
-// dayOfWeek()
-// timeOfDay()
 const fillSentence = function () {
   let time = timeOfDay()
   let day = dayOfWeek()
   daySpan.innerHTML = day
   timeSpan.innerHTML = time
   weatherSpan.innerHTML = weatherStyle
-  tempSpan.innerHTML = tempReal 
+  tempSpan.innerHTML = tempReal
 }
 fillSentence()
 
 let gifDisplay = async function () {
   await axios.get(`https://api.giphy.com/v1/gifs/random?api_key=Wq7BuCPCVvqE56WBBzlB8cQqIpRPJlMN&tag=${mood}&rating=PG&lang=en`)
-    .then(res => { 
+    .then(res => {
       let gif = res.data.data.images.downsized_large.url
       gifDiv.innerHTML = `<img class= "gifimage" src= "${gif}"/>`
-      console.log(mood)
-      
-  }).catch(err => {
-    console.log(err)
-  })
+
+    }).catch(err => {
+      console.log(err)
+    })
 }
 gifDisplay()
 
